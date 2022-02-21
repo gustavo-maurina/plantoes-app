@@ -1,5 +1,18 @@
-import { Text, TextProps } from './Themed';
+import styled from "styled-components/native";
 
-export function MonoText(props: TextProps) {
-  return <Text {...props} style={[props.style, { fontFamily: 'space-mono' }]} />;
-}
+type MyTextType = {
+  size: number;
+  color: string;
+  align: string;
+};
+
+const MyText = styled.Text<MyTextType>`
+  font-family: "poppins";
+  font-size: ${(props) => (props.size ? props.size + "px" : "16px")};
+  color: ${(props) => (props.color ? props.color : "#171717")};
+  text-align: ${(props) => (props.align ? props.align : "left")};
+`;
+
+export const StyledText = (props: any) => {
+  return <MyText {...props} style={[props.style]} />;
+};
