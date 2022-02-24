@@ -1,11 +1,11 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { StyleSheet } from "react-native";
 
-import { Text, View } from "../components/Themed";
-import { RootTabScreenProps } from "../types";
+import { View } from "../components/Themed";
 
-export default function Inicio({ navigation }: RootTabScreenProps<"Inicio">) {
+export const InicioScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   return <View style={styles.container}></View>;
-}
+};
 
 const styles = StyleSheet.create({
   container: {

@@ -5,10 +5,11 @@ type ButtonType = {
   size: number;
   color: string;
   align: string;
+  fill: string;
 };
 
 const Button = styled.TouchableOpacity<ButtonType>`
-  width: 150px;
+  width: ${(props) => (props.fill ? "100%" : " 150px")};
   height: 40px;
   border-radius: 5px;
   background-color: ${(props) => (props.color ? props.color : colors.mainBlue)};

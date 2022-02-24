@@ -1,4 +1,5 @@
-import { Image, Text, View } from "react-native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { View } from "react-native";
 import { ColoredButton } from "../components/ColoredButton";
 import { OutlinedButton } from "../components/OutlinedButton";
 import { StyledText } from "../components/StyledText";
@@ -8,16 +9,13 @@ import {
   Welcome,
   WelcomeImage,
 } from "../styles/WelcomeStyles";
-import { RootTabScreenProps } from "../types";
 
-export const WelcomeScreen = ({
-  navigation,
-}: RootTabScreenProps<"WelcomeScreen">) => {
+export const WelcomeScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   return (
     <Welcome>
       <WelcomeImage
         resizeMode="contain"
-        source={require("../assets/images/welcome_img.png")}
+        source={require("../../assets/images/welcome_img.png")}
       />
       <BottomWrapper
         style={{
@@ -28,7 +26,7 @@ export const WelcomeScreen = ({
             width: 2,
             height: 2,
           },
-          shadowRadius: 2, // <- Radius of the shadow
+          shadowRadius: 2,
         }}
       >
         <View>
@@ -40,17 +38,17 @@ export const WelcomeScreen = ({
             ?
           </StyledText>
         </View>
-        <View>
+        <View style={{ width: "95%" }}>
           <StyledText align="center">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quas
             totam consequuntur accusamus qui doloremque.
           </StyledText>
         </View>
         <ButtonsWrapper>
-          <OutlinedButton>
+          <OutlinedButton onPress={() => navigation.navigate("Login")}>
             <StyledText>Criar conta</StyledText>
           </OutlinedButton>
-          <ColoredButton>
+          <ColoredButton onPress={() => navigation.navigate("Login")}>
             <StyledText color="#fff">Entrar</StyledText>
           </ColoredButton>
         </ButtonsWrapper>

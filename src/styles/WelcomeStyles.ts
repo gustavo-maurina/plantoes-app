@@ -26,6 +26,7 @@ export const BottomWrapper = styled.View`
 `;
 
 export const ButtonsWrapper = styled.View`
+  margin-bottom: 50px;
   width: 85%;
   flex-direction: row;
   justify-content: space-around;
