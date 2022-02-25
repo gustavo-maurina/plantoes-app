@@ -23,6 +23,6 @@ export const LoginInput = styled.TextInput`
   font-family: Poppins;
   padding-left: 15px;
   height: 40px;
-  background-color: #e5e5e5;
+  background-color: #eeeeee;
   margin-top: 15px;
 `;

@@ -10,6 +10,7 @@ export const LoginScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   return (
     <>
       <LoginCard navigation={navigation} />
+
       <View
         style={{
           flex: 1,
@@ -21,10 +22,12 @@ export const LoginScreen = ({ navigation }: NativeStackScreenProps<any>) => {
             AgenDoc
           </StyledText>
         </TopWrapper>
+
         <LoginBottomWrapper>
           <StyledText color="gray" size={20}>
             Não possui conta?
           </StyledText>
+
           <ColoredButton style={{ width: 285, marginTop: 10 }} color="#135479">
             <StyledText color="white">Criar conta</StyledText>
           </ColoredButton>

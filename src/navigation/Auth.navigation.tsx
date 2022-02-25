@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { CadastroScreen } from "../screens/CadastroScreen";
 import { LoginScreen } from "../screens/LoginScreen";
 import { WelcomeScreen } from "../screens/WelcomeScreen";
 
@@ -14,6 +15,11 @@ export const AuthNavigation = () => (
     <Auth.Screen
       name="Login"
       component={LoginScreen}
+      options={{ headerShown: false }}
+    />
+    <Auth.Screen
+      name="Cadastro"
+      component={CadastroScreen}
       options={{ headerShown: false }}
     />
   </Auth.Navigator>

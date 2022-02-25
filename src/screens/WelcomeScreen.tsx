@@ -45,7 +45,7 @@ export const WelcomeScreen = ({ navigation }: NativeStackScreenProps<any>) => {
           </StyledText>
         </View>
         <ButtonsWrapper>
-          <OutlinedButton onPress={() => navigation.navigate("Login")}>
+          <OutlinedButton onPress={() => navigation.navigate("Cadastro")}>
             <StyledText>Criar conta</StyledText>
           </OutlinedButton>
           <ColoredButton onPress={() => navigation.navigate("Login")}>
