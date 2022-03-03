@@ -1,0 +1,1 @@
+export { CardsHospitaisInicio } from "./CardsHospitaisInicio";

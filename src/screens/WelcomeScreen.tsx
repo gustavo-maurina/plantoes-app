@@ -1,14 +1,14 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { View } from "react-native";
-import { ColoredButton } from "../components/ColoredButton";
-import { OutlinedButton } from "../components/OutlinedButton";
-import { StyledText } from "../components/StyledText";
+import { ColoredButton } from "../components/ColoredButton/ColoredButton";
+import { OutlinedButton } from "../components/OutlinedButton/OutlinedButton";
+import { StyledText } from "../components/StyledText/StyledText";
 import {
   BottomWrapper,
   ButtonsWrapper,
   Welcome,
   WelcomeImage,
-} from "../styles/WelcomeStyles";
+} from "../styles/screens/WelcomeStyles";
 
 export const WelcomeScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   return (

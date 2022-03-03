@@ -1,0 +1,1 @@
+export { EstatisticasInicio } from "./EstatisticasInicio";

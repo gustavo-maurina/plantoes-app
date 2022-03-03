@@ -1,10 +1,10 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { View } from "react-native";
-import { ColoredButton } from "../components/ColoredButton";
-import { LoginCard } from "../components/LoginCard";
-import { StyledText } from "../components/StyledText";
+import { ColoredButton } from "../components/ColoredButton/ColoredButton";
+import { LoginCard } from "../components/LoginCard/LoginCard";
+import { StyledText } from "../components/StyledText/StyledText";
 import { colors } from "../styles/colors";
-import { LoginBottomWrapper, TopWrapper } from "../styles/LoginStyles";
+import { LoginBottomWrapper, TopWrapper } from "../styles/screens/LoginStyles";
 
 export const LoginScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   return (
@@ -14,6 +14,7 @@ export const LoginScreen = ({ navigation }: NativeStackScreenProps<any>) => {
       <View
         style={{
           flex: 1,
+          alignItems: "center",
           backgroundColor: colors.lightBlue,
         }}
       >
@@ -28,7 +29,11 @@ export const LoginScreen = ({ navigation }: NativeStackScreenProps<any>) => {
             Não possui conta?
           </StyledText>
 
-          <ColoredButton style={{ width: 285, marginTop: 10 }} color="#135479">
+          <ColoredButton
+            style={{ width: 285, marginTop: 10 }}
+            color="#135479"
+            onPress={() => navigation.navigate("Cadastro")}
+          >
             <StyledText color="white">Criar conta</StyledText>
           </ColoredButton>
         </LoginBottomWrapper>

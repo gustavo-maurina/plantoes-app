@@ -6,14 +6,7 @@ import {
   useState,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
-interface AuthContextData {
-  signed: boolean;
-  user: object | null;
-  signIn(): Promise<void>;
-  signOut(): Promise<void>;
-  loading: boolean;
-}
+import { AuthContextData } from "../models/AuthContextData.model";
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 

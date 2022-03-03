@@ -1,0 +1,1 @@
+export { CadastroInfoAcesso } from "./CadastroInfoAcesso";

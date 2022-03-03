@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { colors } from "../styles/colors";
+import { colors } from "../../styles/colors";
 
 type ButtonType = {
   size: number;
@@ -19,6 +19,13 @@ const Button = styled.TouchableOpacity<ButtonType>`
   margin: 0px;
 `;
 
+/**
+ * Componente genérico de botão
+ *
+ * @param color cor do botão
+ * @param fill se true, botão vai ter "width:100%;"
+ * @returns
+ */
 export const ColoredButton = (props: any) => {
   return <Button {...props} style={[props.style]} />;
 };

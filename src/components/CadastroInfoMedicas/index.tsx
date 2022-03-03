@@ -1,0 +1,1 @@
+export { CadastroInfoMedicas } from "./CadastroInfoMedicas";

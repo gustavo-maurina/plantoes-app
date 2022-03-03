@@ -1,6 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet } from "react-native";
-import { StyledText } from "../components/StyledText";
+import { StyledText } from "../components/StyledText/StyledText";
 
 const styles = StyleSheet.create({
   loadingContainer: {

@@ -1,25 +1,14 @@
 import { useContext, useState } from "react";
 import styled from "styled-components/native";
-import { LoginInput } from "../styles/LoginStyles";
-import { ColoredButton } from "./ColoredButton";
-import { StyledText } from "./StyledText";
-import { View } from "./Themed";
-import Feather from "@expo/vector-icons/Feather";
-import { shadow } from "../styles/shadow";
+import { LoginInput } from "../../styles/screens/LoginStyles";
+import { ColoredButton } from "../ColoredButton/ColoredButton";
+import { StyledText } from "../StyledText/StyledText";
+import { View } from "../Themed";
+import { shadow } from "../../styles/shadow";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useAuth } from "../contexts/AuthProvider";
-
-const Card = styled.View`
-  padding: 15px 20px;
-  border-radius: 10px;
-  background-color: white;
-  height: 300px;
-  width: 80%;
-  position: absolute;
-  align-self: center;
-  top: 35%;
-  z-index: 1;
-`;
+import { useAuth } from "../../contexts/AuthProvider";
+import { Feather } from "@expo/vector-icons";
+import { CardLogin } from "./LoginCard.styles";
 
 export const LoginCard = ({ navigation }: any) => {
   const [passwordHidden, setPasswordHidden] = useState(true);
@@ -31,7 +20,7 @@ export const LoginCard = ({ navigation }: any) => {
   }
 
   return (
-    <Card style={shadow}>
+    <CardLogin style={shadow()}>
       <StyledText size={20} align="center">
         Login
       </StyledText>
@@ -75,6 +64,6 @@ export const LoginCard = ({ navigation }: any) => {
           <StyledText color="white">Entrar</StyledText>
         </ColoredButton>
       </View>
-    </Card>
+    </CardLogin>
   );
 };

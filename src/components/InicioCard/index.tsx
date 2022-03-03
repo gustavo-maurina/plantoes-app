@@ -1,0 +1,1 @@
+export { InicioCard } from "./InicioCard";

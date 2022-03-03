@@ -11,6 +11,7 @@ export default function useCachedResources() {
         await Font.loadAsync({
           ...Feather.font,
           Poppins: require("../../assets/fonts/Poppins-Regular.ttf"),
+          Poppins_bold: require("../../assets/fonts/Poppins-Bold.ttf"),
         });
       } catch (e) {
         console.warn(e);
