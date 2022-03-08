@@ -9,6 +9,7 @@ type ButtonType = {
 };
 
 const Button = styled.TouchableOpacity<ButtonType>`
+  flex-direction: row;
   width: ${(props) => (props.fill ? "100%" : " 150px")};
   height: 40px;
   border-radius: 5px;

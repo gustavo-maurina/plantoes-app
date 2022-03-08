@@ -1,0 +1,1 @@
+export { FormBuscaPlantao } from "./FormBuscaPlantao";

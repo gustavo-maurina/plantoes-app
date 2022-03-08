@@ -22,60 +22,62 @@ export const InicioScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   });
 
   return (
-    <InicioWrapper>
-      <LinearGradient
-        start={{ x: -1, y: -1 }}
-        end={{ x: 1, y: 1 }}
-        colors={["#34A4F4", "#58E1FF"]}
-        style={{ justifyContent: "center", width: "100%" }}
-      >
-        <TopBannerInicio>
-          <TextWrapper>
-            <StyledText color="white" size={16}>
-              Bem vindo, Gustavo
-            </StyledText>
-            <StyledText color="white" size={32} bold>
-              Seu resumo
-            </StyledText>
-          </TextWrapper>
-          <Feather
-            name="refresh-ccw"
-            size={24}
-            color="white"
-            onPress={forceUpdate}
-          />
-        </TopBannerInicio>
-      </LinearGradient>
-
-      <InicioCard />
-
-      <HeaderWrapper>
-        <Feather name="bar-chart-2" color={colors.darkBlue} size={22} />
-        <StyledText
-          bold
-          color={colors.darkBlue}
-          size={20}
-          style={{ marginLeft: 5 }}
+    <>
+      <InicioWrapper>
+        <LinearGradient
+          start={{ x: -1, y: -1 }}
+          end={{ x: 1, y: 1 }}
+          colors={["#34A4F4", "#58E1FF"]}
+          style={{ justifyContent: "center", width: "100%" }}
         >
-          Estatísticas (este mês)
-        </StyledText>
-      </HeaderWrapper>
+          <TopBannerInicio>
+            <TextWrapper>
+              <StyledText color="white" size={16}>
+                Bem vindo, Gustavo
+              </StyledText>
+              <StyledText color="white" size={32} bold>
+                Seu resumo
+              </StyledText>
+            </TextWrapper>
+            <Feather
+              name="refresh-ccw"
+              size={24}
+              color="white"
+              onPress={forceUpdate}
+            />
+          </TopBannerInicio>
+        </LinearGradient>
 
-      <EstatisticasInicio />
+        <InicioCard />
 
-      <HeaderWrapper style={{ marginTop: 10, marginBottom: 20 }}>
-        <FontAwesome5 name="hospital" color={colors.darkBlue} size={22} />
-        <StyledText
-          bold
-          color={colors.darkBlue}
-          size={20}
-          style={{ marginLeft: 5 }}
-        >
-          Locais atendidos (este mês)
-        </StyledText>
-      </HeaderWrapper>
+        <HeaderWrapper>
+          <Feather name="bar-chart-2" color={colors.darkBlue} size={22} />
+          <StyledText
+            bold
+            color={colors.darkBlue}
+            size={20}
+            style={{ marginLeft: 5 }}
+          >
+            Estatísticas (este mês)
+          </StyledText>
+        </HeaderWrapper>
 
-      <CardsHospitaisInicio />
-    </InicioWrapper>
+        <EstatisticasInicio />
+
+        <HeaderWrapper style={{ marginTop: 10, marginBottom: 20 }}>
+          <FontAwesome5 name="hospital" color={colors.darkBlue} size={22} />
+          <StyledText
+            bold
+            color={colors.darkBlue}
+            size={20}
+            style={{ marginLeft: 5 }}
+          >
+            Locais atendidos (este mês)
+          </StyledText>
+        </HeaderWrapper>
+
+        <CardsHospitaisInicio />
+      </InicioWrapper>
+    </>
   );
 };

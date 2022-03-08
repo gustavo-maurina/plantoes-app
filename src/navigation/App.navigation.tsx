@@ -4,6 +4,8 @@ import { Feather } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { PerfilScreen } from "../screens/PerfilScreen";
 import { InicioScreen } from "../screens/InicioScreen";
+import { BuscarScreen } from "../screens/BuscarScreen";
+import { Host } from "react-native-portalize";
 
 const BottomTab = createBottomTabNavigator();
 const Inicio = createNativeStackNavigator();
@@ -12,54 +14,56 @@ const Busca = createNativeStackNavigator();
 const Plantoes = createNativeStackNavigator();
 
 export const AppNavigation = () => (
-  <BottomTab.Navigator
-    initialRouteName="InicioNavigator"
-    screenOptions={{
-      headerShown: false,
-      tabBarActiveTintColor: Colors["light"].tint,
-    }}
-  >
-    <BottomTab.Screen
-      name="InicioNavigator"
-      component={InicioNavigator}
-      options={{
-        title: "Início",
-        tabBarIcon: ({ color }: any) => (
-          <Feather name="home" color={color} size={24} />
-        ),
+  <Host>
+    <BottomTab.Navigator
+      initialRouteName="InicioNavigator"
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: Colors["light"].tint,
       }}
-    />
-    <BottomTab.Screen
-      name="BuscarNavigator"
-      component={BuscaNavigator}
-      options={{
-        title: "Buscar",
-        tabBarIcon: ({ color }: any) => (
-          <Feather name="search" color={color} size={24} />
-        ),
-      }}
-    />
-    <BottomTab.Screen
-      name="MeusPlantoesNavigator"
-      component={MeusPlantoesNavigator}
-      options={{
-        title: "Meus plantões",
-        tabBarIcon: ({ color }: any) => (
-          <Feather name="clock" color={color} size={24} />
-        ),
-      }}
-    />
-    <BottomTab.Screen
-      name="PerfilNavigator"
-      component={PerfilNavigator}
-      options={{
-        title: "Perfil",
-        tabBarIcon: ({ color }: any) => (
-          <Feather name="user" color={color} size={24} />
-        ),
-      }}
-    />
-  </BottomTab.Navigator>
+    >
+      <BottomTab.Screen
+        name="InicioNavigator"
+        component={InicioNavigator}
+        options={{
+          title: "Início",
+          tabBarIcon: ({ color }: any) => (
+            <Feather name="home" color={color} size={24} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="BuscarNavigator"
+        component={BuscaNavigator}
+        options={{
+          title: "Buscar",
+          tabBarIcon: ({ color }: any) => (
+            <Feather name="search" color={color} size={24} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="MeusPlantoesNavigator"
+        component={MeusPlantoesNavigator}
+        options={{
+          title: "Meus plantões",
+          tabBarIcon: ({ color }: any) => (
+            <Feather name="clock" color={color} size={24} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="PerfilNavigator"
+        component={PerfilNavigator}
+        options={{
+          title: "Perfil",
+          tabBarIcon: ({ color }: any) => (
+            <Feather name="user" color={color} size={24} />
+          ),
+        }}
+      />
+    </BottomTab.Navigator>
+  </Host>
 );
 
 const InicioNavigator = () => (
@@ -87,11 +91,11 @@ const PerfilNavigator = () => (
 );
 
 const BuscaNavigator = () => (
-  <Busca.Navigator initialRouteName="PerfilScreen">
+  <Busca.Navigator initialRouteName="BuscarScreen">
     <Busca.Group>
       <Busca.Screen
-        name="PerfilScreen"
-        component={PerfilScreen}
+        name="BuscarScreen"
+        component={BuscarScreen}
         options={{ headerShown: false }}
       />
     </Busca.Group>

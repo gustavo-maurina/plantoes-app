@@ -1,0 +1,1 @@
+export { PesquisasRecentes } from "./PesquisasRecentes";

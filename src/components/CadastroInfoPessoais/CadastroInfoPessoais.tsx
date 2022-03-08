@@ -31,7 +31,7 @@ export const CadastroInfoPessoais = ({
 
   return (
     <>
-      <FormWrapper style={shadow()}>
+      <FormWrapper style={[shadow()]}>
         <StyledText size={22} align="center">
           Cadastro
         </StyledText>
