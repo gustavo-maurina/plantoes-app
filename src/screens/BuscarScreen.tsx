@@ -17,7 +17,7 @@ export const BuscarScreen = ({ navigation }: NativeStackScreenProps<any>) => {
         <StyledText color={colors.darkBlue} size={24} bold>
           Pesquisas recentes
         </StyledText>
-        <PesquisasRecentes />
+        <PesquisasRecentes navigation={navigation} />
       </BuscaHeaderWrapper>
       <BuscarImage
         resizeMode="contain"

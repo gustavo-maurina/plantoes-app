@@ -4,7 +4,11 @@ import { ColoredButton } from "../components/ColoredButton/ColoredButton";
 import { LoginCard } from "../components/LoginCard/LoginCard";
 import { StyledText } from "../components/StyledText/StyledText";
 import { colors } from "../styles/colors";
-import { LoginBottomWrapper, TopWrapper } from "../styles/screens/LoginStyles";
+import {
+  LoginBottomWrapper,
+  LoginInput,
+  TopWrapper,
+} from "../styles/screens/LoginStyles";
 
 export const LoginScreen = ({ navigation }: NativeStackScreenProps<any>) => {
   return (

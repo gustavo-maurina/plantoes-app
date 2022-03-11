@@ -6,6 +6,9 @@ import { PerfilScreen } from "../screens/PerfilScreen";
 import { InicioScreen } from "../screens/InicioScreen";
 import { BuscarScreen } from "../screens/BuscarScreen";
 import { Host } from "react-native-portalize";
+import { ResultadoHospitaisScreen } from "../screens/ResultadoHospitaisScreen";
+import { ResultadoPlantoesScreen } from "../screens/ResultadoPlantoesScreen";
+import { HospitalInfoScreen } from "../screens/HospitalInfoScreen";
 
 const BottomTab = createBottomTabNavigator();
 const Inicio = createNativeStackNavigator();
@@ -20,6 +23,9 @@ export const AppNavigation = () => (
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: Colors["light"].tint,
+        tabBarLabelStyle: {
+          fontSize: 11,
+        },
       }}
     >
       <BottomTab.Screen
@@ -96,6 +102,21 @@ const BuscaNavigator = () => (
       <Busca.Screen
         name="BuscarScreen"
         component={BuscarScreen}
+        options={{ headerShown: false }}
+      />
+      <Busca.Screen
+        name="ResultadoHospitaisScreen"
+        component={ResultadoHospitaisScreen}
+        options={{ headerShown: false }}
+      />
+      <Busca.Screen
+        name="ResultadoPlantoesScreen"
+        component={ResultadoPlantoesScreen}
+        options={{ headerShown: false }}
+      />
+      <Busca.Screen
+        name="HospitalInfoScreen"
+        component={HospitalInfoScreen}
         options={{ headerShown: false }}
       />
     </Busca.Group>

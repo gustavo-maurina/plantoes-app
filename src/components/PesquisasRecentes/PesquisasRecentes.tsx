@@ -12,10 +12,12 @@ import { useRef, useState } from "react";
 import { FormBuscaPlantao } from "../FormBuscaPlantao";
 import { Modalize } from "react-native-modalize";
 import { Portal } from "react-native-portalize";
+import { NavigationProp } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { PropsWithNavigation } from "../../models/PropsWithNavigation";
 
-export const PesquisasRecentes = () => {
+export const PesquisasRecentes = ({ navigation }: PropsWithNavigation) => {
   const modalizeRef = useRef<Modalize>(null);
-
   const switchBottomSheet = () => modalizeRef.current?.open();
 
   return (
@@ -60,7 +62,10 @@ export const PesquisasRecentes = () => {
           avoidKeyboardLikeIOS={true}
           adjustToContentHeight
         >
-          <FormBuscaPlantao closeModal={() => modalizeRef.current?.close()} />
+          <FormBuscaPlantao
+            navigation={navigation}
+            closeModal={() => modalizeRef.current?.close()}
+          />
         </Modalize>
       </Portal>
     </>

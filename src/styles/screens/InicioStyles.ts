@@ -1,7 +1,6 @@
 import styled from "styled-components/native";
 
 export const InicioWrapper = styled.View`
-  background-color: white;
   justify-content: flex-start;
   align-items: center;
   height: 100%;

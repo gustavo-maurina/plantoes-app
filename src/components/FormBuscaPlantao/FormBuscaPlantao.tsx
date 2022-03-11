@@ -1,4 +1,6 @@
 import { Feather } from "@expo/vector-icons";
+import { NavigationProp } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useState } from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { colors } from "../../styles/colors";
@@ -16,9 +18,13 @@ import {
 
 interface FormBuscaPlantaoProps {
   closeModal: () => void;
+  navigation: NativeStackNavigationProp<any>;
 }
 
-export const FormBuscaPlantao = ({ closeModal }: FormBuscaPlantaoProps) => {
+export const FormBuscaPlantao = ({
+  closeModal,
+  navigation,
+}: FormBuscaPlantaoProps) => {
   const [tipoPesquisa, setTipoPesquisa] = useState<string>("local");
 
   return (
@@ -61,7 +67,14 @@ export const FormBuscaPlantao = ({ closeModal }: FormBuscaPlantaoProps) => {
         )}
       </FieldsWrapper>
 
-      <ColoredButton fill style={{ marginBottom: 10 }}>
+      <ColoredButton
+        fill
+        style={{ marginBottom: 10 }}
+        onPress={() => {
+          closeModal();
+          navigation.navigate("ResultadoHospitaisScreen");
+        }}
+      >
         <Feather name="search" color={"white"} size={16}></Feather>
         <StyledText color="white" style={{ marginLeft: 5 }}>
           Pesquisar

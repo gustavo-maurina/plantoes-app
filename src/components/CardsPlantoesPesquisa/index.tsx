@@ -1,0 +1,1 @@
+export { CardsPlantoesPesquisa } from "./CardsPlantoesPesquisa";

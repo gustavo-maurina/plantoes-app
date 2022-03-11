@@ -1,0 +1,1 @@
+export { InfraestruturaHospital } from "./InfraestruturaHospital";
